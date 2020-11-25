@@ -18,6 +18,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+    <script src="../js/solicitarelatorio.js"></script>
+
 </head>
 
 <body>
@@ -26,11 +28,11 @@
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
             <div class="col-lg-8 col-md-8 col-sm-8 menu"></div>
-            
+
         </div>
         <br>
         <br>
-        
+
         <div class="row">
             <br>
             <br>
@@ -47,7 +49,7 @@
                 <button class="btn btn-primary" onclick="fazerLogout(event)">Logout</button>
 
             </div>
-         
+
 
         </div>
 
@@ -58,59 +60,59 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 menu">
-            <form>
-                <legend>Selecione seu Relatorio</legend>
-                <br>
-                <div class="col">
-                <div class="form-row">
-                <div class="form-group col-lg-2">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="checkbox_agencia">
-                <label class="custom-control-label" for="customCheck1">Agencia</label>
-              </div>
-            </div>
-              <div class="form-group col-lg-3">
-                  <select id="inputAgencia" class="form-control">
-                  <option selected>Agência 1</option>
-                  <option selected>Agência 2</option>
-                  <option>...</option>
-                </select>
-              </div>
+                <form>
+                    <legend>Selecione seu Relatorio</legend>
+                    <br>
+                    <div class="col">
+                        <div class="form-row">
+                            <div class="form-group col-lg-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox_agencia">
+                                    <label class="custom-control-label" for="customCheck1">Agencia</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <select id="sel_agencias" class="form-control">
+                            
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-lg-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox_data">
+                                    <label class="custom-control-label" for="customCheck1">Data</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input type="date" class="form-control" id="inputData">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-lg-2">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox_cliente">
+                                    <label class="custom-control-label" for="customCheck1">Cliente</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input type="text" class="form-control" id="inputNome" placeholder="Nome do Cliente">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" onclick="gerarRelatorio(resposta)">Gerar</button>
+                    </div>
+                </form>
+
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-lg-2">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="checkbox_data">
-                <label class="custom-control-label" for="customCheck1">Data</label>
-              </div>
-            </div>
-            <div class="form-group col-lg-3">
-                <input type="date" class="form-control" id="inputData">
-            </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-lg-2">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="checkbox_cliente">
-                <label class="custom-control-label" for="customCheck1">Cliente</label>
-              </div>
-            </div>
-            <div class="form-group col-lg-3">
-                <input type="text" class="form-control" id="inputNome" placeholder="Nome do Cliente">
-            </div>
         </div>
 
-        </div>
-        <div class="col">
-            <button class="btn btn-primary" onclick="gerarRelatorio(event)">Gerar</button>
-        </div>
-            </form>
-
-        </div>
-
-        </div>
+        <div class="row" id="tableResposta"></div>
 
 
 
