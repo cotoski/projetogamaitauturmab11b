@@ -19,12 +19,18 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/solicitarelatorio.js"></script>
+    <link rel="stylesheet" href="/css/biblioteca_css.css">
 
 </head>
 
 <body>
 
     <div class="container">
+        <div class="row fundo ">
+            <div class="col-xs-2 col-md-2 col-sm-2 menu"><img src="/img/logoitau.png" width="40%"> </div>
+            <div class="col-xs-10 col-md-10 col-sm-10 menu"></div>
+    
+        </div>
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
             <div class="col-lg-8 col-md-8 col-sm-8 menu"></div>
@@ -36,7 +42,7 @@
         <div class="row">
             <br>
             <br>
-            <div class="col-lg-8 col-md-8 col-sm-8 menu">
+            <div class="col-lg-10 col-md-10 col-sm-10 menu">
                 <div class="media">
                     <img src="..." class="mr-3" alt="...">
                     <div class="media-body">
@@ -45,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 menu">
+            <div class="col-lg-2 col-md-2 col-sm-2 alinharDireita">
                 <button class="btn btn-primary" onclick="fazerLogout(event)">Logout</button>
 
             </div>
@@ -58,20 +64,21 @@
         <br>
         <br>
 
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 menu">
+        <div class="row fonte">
+            <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
+            <div class="col-lg-8 col-md-8 col-sm-8 menu">
                 <form>
                     <legend>Selecione seu Relatorio</legend>
                     <br>
                     <div class="col">
                         <div class="form-row">
-                            <div class="form-group col-lg-2">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="checkbox_agencia">
-                                    <label class="custom-control-label" for="customCheck1">Agencia</label>
+                            <div class="form-group col-lg-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="checkbox_agencia">
+                                    <label class="form-check-label" for="customCheck1">Agencia</label>
                                 </div>
                             </div>
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col-lg-8">
                                 <select id="sel_agencias" class="form-control">
                             
                                 </select>
@@ -79,37 +86,39 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-lg-2">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="checkbox_data">
-                                    <label class="custom-control-label" for="customCheck1">Data</label>
+                            <div class="form-group col-lg-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="checkbox_data">
+                                    <label class="form-check-label" for="customCheck1">Data</label>
                                 </div>
                             </div>
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col-lg-8">
                                 <input type="date" class="form-control" id="inputData">
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-lg-2">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="checkbox_cliente">
-                                    <label class="custom-control-label" for="customCheck1">Cliente</label>
+                            <div class="form-group col-lg-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="checkbox_cliente">
+                                    <label class="form-check-label" for="customCheck1">Cliente</label>
                                 </div>
                             </div>
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col-lg-8">
                                 <input type="text" class="form-control" id="inputNome" placeholder="Nome do Cliente">
                             </div>
                         </div>
 
                     </div>
                     <div class="col">
+                        <br>
+                        <br>
                         <button class="btn btn-primary" onclick="gerarRelatorio(resposta)">Gerar</button>
                     </div>
                 </form>
 
             </div>
-
+            <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
         </div>
 
         <div class="row" id="tableResposta"></div>
