@@ -7,11 +7,11 @@ function obterAgencias(){
 }
 
 function preencheAgencias(resposta){
-    //console.log(resposta);
+    console.log(resposta);
     let agencias = '';
 
     for (let index = 0; index < resposta.length; index++) {
-        agencias = agencias + `<option value = ${resposta[index].id}> ${resposta[index].nome} </option>`;
+        agencias = agencias + `<option value = ${resposta[index].id}> ${resposta[index].nome_agencia} </option>`;
     }
 
     document.getElementById("sel_agencias").innerHTML = agencias;
