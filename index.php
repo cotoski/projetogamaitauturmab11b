@@ -28,9 +28,13 @@
     
     <div class="container">
     <div class="row">
-    <div class="col-lg-2 alinharEsquerda col-md-2 alinharCentro col-sm-2 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px class="alinharCentro"> </div>
-        <div class="col-lg-10 col-md-10 col-sm-10 menu"></div>
+
+    <div class="col-lg-12 alinharEsquerda col-md-12 alinharCentro col-sm-12 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px> </div>
+        
     </div>
+    <!--<div class="col-lg-2 alinharEsquerda col-md-2 alinharCentro col-sm-2 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px class="alinharCentro"> </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 menu"></div>
+    </div> -->
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 menu"></div>
             <div class="col-lg-4 col-md-4 col-sm-4 menu">
