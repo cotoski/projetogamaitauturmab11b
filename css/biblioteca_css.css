@@ -1,0 +1,14 @@
+.fundo{
+    background-color:#FF9900;
+   }
+
+.fonte{
+    color: rgb(78, 75, 75);
+    font-size: 14px bold 50px;
+    font-family: verdana;
+    
+}
+
+.alinharDireita{
+    text-align: right;
+}

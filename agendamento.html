@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="../js/agendamento.js"></script>
+<link rel="stylesheet" href="../css/biblioteca_css.css">
+
+</head>
+<body onload="validaData();obterAgencias()">
+
+    <div class="container">
+      <div class="row fundo">
+        <div class="col-xs-2 col-md-2 col-sm-2 menu"><img src="../img/logoitau.png" width="40%"> </div>
+        <div class="col-xs-10 col-md-10 col-sm-10 menu"></div>
+
+    </div>
+    <br>
+    <br>
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
+            <div class="col-lg-8 col-md-8 col-sm-8 menu">
+                <form>
+                    <div class="form-row">
+                      <div class="col">
+                        <label>Nome</label>
+                        <br>
+                        <input type="text" class="form-control" id="inputNome">
+                        </div>
+                        </div>
+                        <br>
+                      
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="inputCelular">Celular/Whatsapp</label>
+                        <input type="tel" class="form-control" id="inputCelular" pattern="[0-9]{11}" placeholder="00000000000">
+                    </div>
+                      </div>
+                      <div class="form-row">
+                        
+                      <div class="form-group col-lg-6">
+                        <label for="data">Data</label>
+                        <input type="date" class="form-control" id="data" >
+                    </div> 
+                    <div class="form-group col-lg-6">
+                        <label for="sel_agencias">Agência</label>
+                        <select id="sel_agencias" class="form-control"  >
+                        
+                        </select>
+                      </div>
+                      </div>
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputInicio">Hora Início</label>
+                        <input type="time" class="form-control" id="inputInicio">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputFim">Hora Fim</label>
+                        <input type="time" class="form-control" id="inputFim">
+                      </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                  </form>
+
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 menu"></div>
+        </div>
+        
+    
+    
+</body>
+</html>
