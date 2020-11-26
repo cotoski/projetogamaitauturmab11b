@@ -33,3 +33,37 @@ today = yyyy+'-'+mm+'-'+dd;
 document.getElementById("data").setAttribute("min", today);
 }
 
+function agenda(event){
+    event.preventDefault();//evitar comprogament
+    let txtNome = document.getElementById("inputNome").value;
+    let txtEmail = document.getElementById("inputEmail").value;
+    let txtCelular = document.getElementById("inputCelular").value;
+    let txtData = document.getElementById("data").value;
+    let txtAgencia = document.getElementById("sel_agencias").value;
+    let txtInicio = document.getElementById("inputInicio").value;
+    let txtFim = document.getElementById("inputFim").value;
+
+    let loginMsg = {
+        nome_cli: txtNome,
+        email_cli:txtEmail,
+        celular_cli:txtCelular,
+        data_agendamento:txtData,
+        hora_agendamento:txtInicio,
+        observacao:txtNome
+        
+    }
+
+    let msg = {
+        method: 'POST',
+        body: JSON.stringify(loginMsg), //convertendo objeto java script em texto
+        headers: {
+            'Content-type': 'application/json'
+        }
+    }
+
+    fetch("https://itau-backend.herokuapp.com/agendamento/new", msg)
+        .then(res => tratarRetorno(res));
+
+
+}
+
