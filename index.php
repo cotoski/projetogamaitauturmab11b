@@ -29,7 +29,7 @@
     <div class="container">
     <div class="row">
 
-    <div class="col-lg-12 alinharEsquerda col-md-12 alinharCentro col-sm-12 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px> </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px> </div>
         
     </div>
     <!--<div class="col-lg-2 alinharEsquerda col-md-2 alinharCentro col-sm-2 alinharCentro"><img src="../img/logoitau.png" width=100px height=100px class="alinharCentro"> </div>
