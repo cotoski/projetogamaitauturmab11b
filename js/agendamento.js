@@ -1,7 +1,7 @@
 
 
 function obterAgencias(){
-    fetch("http://localhost:8080/agencia/all")
+    fetch("https://itau-backend.herokuapp.com/agencia/all")
     .then(res => res.json())
     .then(result => preencheAgencias(result));
 }
