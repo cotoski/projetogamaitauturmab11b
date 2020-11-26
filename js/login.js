@@ -38,5 +38,5 @@ function tratarRetorno(retorno) {
 function fazerLogin(user){
     document.getElementById("divUser").innerHTML = "<b>" + user.nome + "</b> (" + user.email + ")";
     localStorage.setItem("userLogged", JSON.stringify(user));
-    window.location = "interna.html";
+    window.location = "solicitarelatorio.html";
 }
