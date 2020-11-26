@@ -28,8 +28,8 @@
     
     <div class="container">
     <div class="row">
-    <div class="col-xs-2 col-md-2 col-sm-2 menu"><img src="../img/logoitau.png" width="40%"> </div>
-        <div class="col-xs-10 col-md-10 col-sm-10 menu"></div>
+    <div class="col-lg-2 alinharEsquerda col-md-2 col-sm-2 alinharCentro"><img src="../img/logoitau.png" width="40%"> </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 menu"></div>
     </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 menu"></div>
