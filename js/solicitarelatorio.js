@@ -2,13 +2,13 @@ function validaLogin(params) {
     let userTxt=localStorage.getItem("userLogged");
 
     if(!userTxt){
-        window.location = "index.html"
+        window.location = "index.php"
     }
 }
 
 function logout() {
     localStorage.removeItem("userLogged");
-    window.location = "index.html"
+    window.location = "index.php"
 }
 
 function obterAgencias(){
