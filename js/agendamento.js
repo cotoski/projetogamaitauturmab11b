@@ -50,7 +50,6 @@ function agenda(event){
         data_agendamento:txtData,
         hora_agendamento:txtInicio,
         observacao:txtNome
-        
     }
 
     let msg = {
@@ -63,7 +62,5 @@ function agenda(event){
 
     fetch("https://itau-backend.herokuapp.com/agendamento/new", msg)
         .then(res => tratarRetorno(res));
-
-
 }
 
