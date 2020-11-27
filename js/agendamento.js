@@ -1,7 +1,7 @@
 
 
 function obterAgencias(){
-    fetch("https://itau-backend.herokuapp.com/agencia/all")
+    fetch("http://localhost:8080/agencia/all")
     .then(res => res.json())
     .then(result => preencheAgencias(result));
 }
@@ -33,23 +33,26 @@ today = yyyy+'-'+mm+'-'+dd;
 document.getElementById("data").setAttribute("min", today);
 }
 
-function agenda(event){
-    event.preventDefault();//evitar comprogament
+function agenda(){
+    //event.preventDefault();//evitar comprogament
     let txtNome = document.getElementById("inputNome").value;
     let txtEmail = document.getElementById("inputEmail").value;
     let txtCelular = document.getElementById("inputCelular").value;
     let txtData = document.getElementById("data").value;
-    let txtAgencia = document.getElementById("sel_agencias").value;
+    let agencia = document.getElementById("sel_agencias");
+    let txtAgencia = agencia[agencia.selectedIndex].value;
+    //let txtAgencia = document.getElementById("sel_agencias").value;
     let txtInicio = document.getElementById("inputInicio").value;
     let txtFim = document.getElementById("inputFim").value;
 
     let loginMsg = {
-        nome_cli: txtNome,
-        email_cli:txtEmail,
-        celular_cli:txtCelular,
-        data_agendamento:txtData,
-        hora_agendamento:txtInicio,
-        observacao:txtNome
+        nomeCli: txtNome,
+        emailCli:txtEmail,
+        celularCli:txtCelular,
+        dataAgendamento:txtData,
+        horaAgendamento:txtInicio,
+        observacao:txtNome,
+        agencia: {id:txtAgencia}
     }
 
     let msg = {
@@ -60,8 +63,77 @@ function agenda(event){
         }
     }
 
-    fetch("https://itau-backend.herokuapp.com/agendamento/new", msg)
-        .then(res => tratarRetorno(res));
+    
+    fetch("http://localhost:8080/agendamento/new", msg)
+    //fetch("https://itau-backend.herokuapp.com/agendamento/new", msg)
+        .then(res => tratarRetorno(res))
+
+    
+}
+
+function validar(event) {
+    event.preventDefault();//evitar comprogament
+    // pegando o valor do nome pelos names
+    var inputNome = document.getElementById("inputNome");
+    var inputEmail = document.getElementById("inputEmail");
+    var inputCelular = document.getElementById("inputCelular");
+    var data = document.getElementById("data");
+    var inputInicio = document.getElementById("inputInicio");
+    var inputFim = document.getElementById("inputFim");
+
+  
+    // verificar se o nome está vazio
+    if (inputNome.value == "") {
+      alert("Nome não informado");
+      inputNome.focus();
+      return;
+    }
+
+    if (inputEmail.value == "") {
+        alert("Email não informado");
+        inputCelular.focus();
+        return;
+    }
+    
+    if (inputCelular.value == "") {
+      alert("Celular não informado");
+      inputCelular.focus();
+      return;
+    }
+
+    if (data.value == "") {
+        alert("Incio não informada");
+        data.focus();
+        return;
+      }
+
+    if (inputInicio.value == "") {
+      alert("Incio não informada");
+      inputInicio.focus();
+      return;
+    }
+
+    if (inputFim.value == "") {
+      alert("Telefone não informado");
+      inputFim.focus();
+      return;
+    }
+  
+    alert("Formulário enviado!");
+    // envia o formulário
+    agenda();
+  }
+
+function tratarRetorno(retorno) {
+    if (retorno.status == 200) { //sucesso
+        document.getElementById("msgRetorno").innerHTML = "Cadastro realizado com sucesso!";
+        retorno.json()
+            .then(res => fazerLogin(res) );
+
+    } else {//falha
+        document.getElementById("msgRetorno").innerHTML = "Cadastro não realizado!";
+    }
+
 }
 
 

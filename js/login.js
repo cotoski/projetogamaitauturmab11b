@@ -18,7 +18,8 @@ function validarLogin(event) {
         }
     }
 
-    fetch("https://itau-backend.herokuapp.com/usuario/login", msg)
+    fetch("http://localhost:8080/usuario/login", msg)
+    // fetch("https://itau-backend.herokuapp.com/usuario/login", msg)
         .then(res => tratarRetorno(res));
 }
 

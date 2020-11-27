@@ -20,3 +20,14 @@
 .alinharEsquerda{
     text-align: left;
 }
+
+.usuario{
+    height: 80px;
+    width: 70px;
+
+}
+
+.cabecalho{
+    text-align: justify;
+    color: azure;
+}
